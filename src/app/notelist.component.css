@@ -1,0 +1,21 @@
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.listid {
+float: right;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 65%;
+}
+.listtitle {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 200%;
+font-weight: bold;
+}
+.notelistback {
+  background-color: rgb(204, 218, 248);
+  box-shadow: 2px 2px #b4c5eb;
+  border-radius: .3em;
+  display: inline-block;
+  margin: .2em;
+  padding: .6em;
+}

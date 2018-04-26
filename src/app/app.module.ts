@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
+import { NoteListService } from './notelist.service';
+import { NoteListComponent } from './notelist.component';
+import { NoteItemComponent } from './noteitem.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoteListComponent,
+    NoteItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NoteListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

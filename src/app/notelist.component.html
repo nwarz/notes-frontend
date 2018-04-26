@@ -1,0 +1,22 @@
+<div class="notelistback">
+  <div class="listid">
+    {{noteList.id}}
+  </div>
+
+  <div *ngIf="!editable" class="listtitle">
+    {{noteList.name}}
+  </div>
+  <input #listtitle [hidden]="!editable" (keyup.enter)="update(listtitle.value)"
+    class="listtitle listtitleinput" type="text"
+    value="{{noteList.name}}">
+
+  <button (click)="update(listtitle.value)" *ngIf="editable">save</button>
+  <button (click)="makeEditable()" *ngIf="!editable">edit</button>
+  <button (click)="remove()">remove</button>
+  <button (click)="addItem()">add item</button>
+
+  <div *ngFor="let noteItem of noteList.noteItems">
+    <app-note-item [noteItem]='noteItem' 
+        (updateItem)="onUpdateItem($event)" (deleteItem)="onDeleteItem($event)"></app-note-item>
+  </div>
+</div>

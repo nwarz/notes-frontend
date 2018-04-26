@@ -1,0 +1,27 @@
+.itemid {
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65%;
+}
+.itemcontent {
+  background-color: #cccfec;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  padding: .7em;
+}
+.itemtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 120%;
+}
+.itemtop {
+  padding: .2em;
+}
+.itemcard {
+    background-color: #8ea1f3;
+    box-shadow: 2px 2px #9fadca;
+    border-radius: .3em;
+    display: inline-block;
+    margin: .2em;
+    padding: .6em;
+}

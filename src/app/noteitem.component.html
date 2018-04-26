@@ -1,0 +1,23 @@
+<div class="itemcard">
+
+  <div class="itemtop">
+    <div class="itemid">{{noteItem.id}}</div>
+
+    <div *ngIf="!editable" class="itemtitle">
+       {{noteItem.name}}
+    </div>
+    <input #itemtitle [hidden]="!editable" 
+        (keyup.enter)="update(itemtitle.value, itemcontent.value)"
+        class="itemtitle itemtitleinput" type="text" 
+        value="{{noteItem.name}}">
+
+    <button (click)="update(itemtitle.value, itemcontent.value)" *ngIf="editable">save</button>
+    <button (click)="makeEditable()" *ngIf="!editable">edit</button>
+    <button (click)="confirmRemove()">remove</button>
+  </div>
+
+  <div *ngIf="!editable" class="itemcontent">{{noteItem.content}}</div>
+  <textarea #itemcontent [hidden]="!editable" type="text" value="{{noteItem.content}}" class="itemcontent"></textarea>
+
+</div>
+<br>
